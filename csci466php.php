@@ -17,6 +17,9 @@ function draw_table($rows) {
     foreach($row as $item) {
       echo "<td>$item</td>";
     }
+    echo "<td><button>Select This Item</button></td>";
+    echo "<td><input type='number'></td>";
+    echo "<td><button>Select This Item</button></td>";
     echo "</tr>";
   }
 }
