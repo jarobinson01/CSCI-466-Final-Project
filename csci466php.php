@@ -21,7 +21,9 @@ function draw_table($rows) {
   }
 }
 
-
+$rs = $pdo->query("SELECT * FROM Inventory;");
+$rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+draw_table($rows);
 
 echo "</table>";
 ?>
