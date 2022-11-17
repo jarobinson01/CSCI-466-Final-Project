@@ -19,7 +19,7 @@ function draw_table($rows) {
     }
     echo "<td><button>Select This Item</button></td>";
     echo "<td><input type='number'></td>";
-    echo "<td><button>Select This Item</button></td>";
+    echo "<td><button>Add To Cart</button></td>";
     echo "</tr>";
   }
 }
