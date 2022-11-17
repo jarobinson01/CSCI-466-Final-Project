@@ -2,7 +2,7 @@
 include("passwords.php");
 
 $dsn = "mysql:host=courses;dbname=z1934222";
-$pdo = new PDO($dsn, username, password);
+$pdo = new PDO($dsn, $username, $password);
 
 function draw_table($rows) {
   echo "<table border=1 cellspacing=1>";
