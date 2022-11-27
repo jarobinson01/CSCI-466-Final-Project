@@ -22,6 +22,10 @@ function draw_table($rows) {
     echo "<td><button>Add To Cart</button></td>";
     echo "</tr>";
   }
+
+  echo "<br>";
+  echo "<button>Track My Orders</button>";
+  echo "<button>Outstanding Orders</button>";
 }
 
 $rs = $pdo->query("SELECT * FROM Inventory;");
