@@ -22,15 +22,15 @@ function draw_table($rows) {
     echo "<td><button>Add To Cart</button></td>";
     echo "</tr>";
   }
-
-  echo "<br>";
-  echo "<button>Track My Orders</button>";
-  echo "<button>Outstanding Orders</button>";
 }
 
 $rs = $pdo->query("SELECT * FROM Inventory;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
+
+echo "<br>";
+echo "<button>Track My Orders</button>";
+echo "<button>Outstanding Orders</button>";
 
 echo "</table>";
 ?>
