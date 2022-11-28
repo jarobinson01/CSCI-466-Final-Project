@@ -1,4 +1,5 @@
 <?php
+include("passwords.php");
 include("functions.php");
 
 $dsn = "mysql:host=courses;dbname=z1934222";
