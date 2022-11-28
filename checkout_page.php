@@ -2,14 +2,14 @@
 include("passwords.php");
 include("functions.php");
 
-echo "<h>Checkout</h><br>";
+echo "<b>Checkout</b><br>";
 
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
 $rs = $pdo->query("SELECT * FROM Cart;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
-draw_order_table($rows);
+draw_table($rows);
 
 echo "<form action='order_confirmation' method='post'>";
 echo "First Name: <input type='text' name='f_name'><br>";
