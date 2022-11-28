@@ -1,24 +1,24 @@
 <?php
 if (isset($_POST['ITEM_ID'], $_POST['ITEM_QTY']) && is_numeric($_POST['ITEM_ID']) && is_numeric($_POST['ITEM_QTY'])) {
-    echo "<h1>Cart</h1><br>";
+    echo "<h2>Cart</h2><br>";
 
-    $ITEM_ID = (int)$_POST['ITEM_ID'];
-    $ITEM_QTY = (int)$_POST['ITEM_QTY'];
+    $id = (int)$_POST['ITEM_ID'];
+    $qty = (int)$_POST['ITEM_QTY'];
 
     $stmt = $pdo->prepare('SELECT * FROM Cart WHERE id = ?');
-    $stmt->execute([$_POST['ITEM_ID']]);
+    $stmt->execute([$_POST['id']]);
 
-    $ITEM_QTY = $stmt->fetch(PDO::FETCH_ASSOC);
+    $item = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($ITEM_NAME && $ITEM_QTY > 0) {
+    if ($item && $qty > 0) {
         if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
-            if (array_key_exists($ITEM_ID, $_SESSION['cart'])) {
-                $_SESSION['cart'][$ITEM_ID] += $ITEM_QTY;
+            if (array_key_exists($id, $_SESSION['cart'])) {
+                $_SESSION['cart'][$id] += $qty;
             } else {
-                $_SESSION['cart'][$ITEM_ID] = $ITEM_QTY;
+                $_SESSION['cart'][$id] = $qty;
             }
         } else {
-            $_SESSION['cart'] = array($ITEM_ID => $ITEM_QTY);
+            $_SESSION['cart'] = array($id => $qty);
         }
     }
     header('location: index.php?page=cart');
