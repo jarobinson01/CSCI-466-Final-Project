@@ -2,7 +2,7 @@
 include("passwords.php");
 include("functions.php");
 
-echo "<h>Checkout</h>";
+echo "<h>Checkout</h><br>";
 
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);

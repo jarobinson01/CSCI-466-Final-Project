@@ -14,5 +14,9 @@ echo "<form action='order_fulfilment.php'>";
 echo "<input type='submit' value='Outstanding Orders'/>";
 echo "</form>";
 
+echo "<form action='cart_page.php'>";
+echo "<input type='submit' value='View Cart'/>";
+echo "</form>";
+
 echo "</table>";
 ?>
