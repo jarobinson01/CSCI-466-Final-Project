@@ -22,6 +22,24 @@ function draw_product_table($rows) {
   }
 }
 
+function draw_order_table($rows) {
+    echo "<table border=1 cellspacing=1>";
+    echo "<tr>";
+  
+    foreach($rows[0] as $key => $item) {
+      echo "<th>$key</th>";
+    }
+  
+    foreach($rows as $row) {
+      echo "<tr>";
+      foreach($row as $item) {
+        echo "<td>$item</td>";
+      }
+      echo "<td><button>Fulfill Order</button></td>";
+      echo "</tr>";
+    }
+  }
+
 function draw_table($rows) {
     echo "<table border=1 cellspacing=1>";
     echo "<tr>";
