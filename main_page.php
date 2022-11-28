@@ -28,7 +28,6 @@ $rs = $pdo->query("SELECT * FROM Inventory;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
 
-echo "<br>";
 echo "<button>Track My Orders</button>";
 echo "<button>Outstanding Orders</button>";
 
