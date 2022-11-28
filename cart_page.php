@@ -8,6 +8,9 @@ if (isset($_POST['ITEM_ID'], $_POST['ITEM_QTY']) && is_numeric($_POST['ITEM_ID']
     $stmt = $pdo->prepare('SELECT * FROM Cart WHERE id = ?');
     $stmt->execute([$_POST['id']]);
 
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    draw_table($rows);
+
     $item = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($item && $qty > 0) {
