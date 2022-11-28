@@ -10,7 +10,7 @@ $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
 
 echo "<button>Track My Orders</button>";
-echo "<button action='order_fulfilment.php'>Outstanding Orders</button>";
+echo "<button onclick='order_fulfilment.php'>Outstanding Orders</button>";
 
 echo "</table>";
 ?>
