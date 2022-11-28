@@ -15,10 +15,6 @@ function draw_table($rows) {
     foreach($row as $item) {
       echo "<td>$item</td>";
     }
-    echo "<td><button>Select This Item</button></td>";
-    echo "<td>Qty: <input type='number'></td>";
-    echo "<td><button>Add To Cart</button></td>";
-    echo "</tr>";
   }
 }
 ?>
