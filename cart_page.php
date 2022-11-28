@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['ITEM_ID'], $_POST['ITEM_QTY']) && is_numeric($_POST['ITEM_ID']) && is_numeric($_POST['ITEM_QTY'])) {
-    echo "<h>Cart</h><br>";
+    echo "<h1>Cart</h1><br>";
 
     $ITEM_ID = (int)$_POST['ITEM_ID'];
     $ITEM_QTY = (int)$_POST['ITEM_QTY'];
