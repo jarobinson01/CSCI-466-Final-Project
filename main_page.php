@@ -7,10 +7,12 @@ $pdo = new PDO($dsn, $username, $password);
 
 $rs = $pdo->query("SELECT * FROM Inventory;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
-draw_table($rows);
+draw_product_table($rows);
 
 echo "<button>Track My Orders</button>";
-echo "<button onclick='order_fulfilment.php'>Outstanding Orders</button>";
+echo "<form action='order_fulfilment.php>";
+echo "<input type='submit' value='Outstanding Orders'/>";
+echo "</form>";
 
 echo "</table>";
 ?>
