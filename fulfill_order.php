@@ -10,7 +10,7 @@ $pdo = new PDO($dsn, $username, $password);
 $fulfill = $pdo->prepare("ALTER Orders SET ORDER_STATUS = 'FULFILLED' WHERE TRACKING_NUM = ?;");
 $fulfill->execute(array($tracking));
 
-$rs = $pdo->query("SELECT * FROM Orders;");
+$rs = $pdo->query("SELECT * FROM Orders WHERE TRACKING_NUM = 1;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_order_table($rows);
 
