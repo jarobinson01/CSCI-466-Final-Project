@@ -15,7 +15,7 @@ function draw_product_table($rows) {
     echo "<tr>";
     foreach($row as $item) {
       echo "<td>$item</td>";
-      $qty = array($item)['ITEM_QTY'];
+      $qty = array($item)[3];
     }
 
     echo "<td><button>Select This Item</button></td>";
