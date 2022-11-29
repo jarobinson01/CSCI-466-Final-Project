@@ -18,7 +18,7 @@ function draw_product_table($rows) {
     $qty = $row['ITEM_QTY'];
 
     echo "<td><button>Select This Item</button></td>";
-    echo "<td>Qty: ".$qty."<input type='number' min='1' value='1'></td>";
+    echo "<td>Qty: <input type='number' min='1' max='".$qty."'value='1'></td>";
     echo "<td><button>Add To Cart</button></td>";
     echo "</tr>";
   }
