@@ -2,6 +2,10 @@
 include("passwords.php");
 include("functions.php");
 
+echo "<form action='main_page.php'>";
+echo "<input type='submit' value='Home'/>";
+echo "</form><br>";
+
 echo "<h2>Checkout</h2><br>";
 
 $dsn = "mysql:host=courses;dbname=z1934222";

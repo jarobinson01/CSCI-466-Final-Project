@@ -18,5 +18,9 @@ echo "<form action='cart_page.php'>";
 echo "<input type='submit' value='View Cart'/>";
 echo "</form>";
 
+echo "<form action='checkout_page.php'>";
+echo "<input type='submit' value='Checkout Now'/>";
+echo "</form>";
+
 echo "</table>";
 ?>

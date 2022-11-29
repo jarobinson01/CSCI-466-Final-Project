@@ -15,11 +15,12 @@ function draw_product_table($rows) {
     foreach($row as $item) {
       echo "<td>$item</td>";
     }
+    $id = $row['ITEM_ID'];
     $qty = $row['ITEM_QTY'];
 
     echo "<td><button>Select This Item</button></td>";
     echo "<td>Qty: <input type='number' min='1' max='".$qty."'value='1'></td>";
-    echo "<td><button>Add To Cart</button></td>";
+    echo "<td><button id='".$id."'>Add To Cart</button></td>";
     echo "</tr>";
   }
 }
@@ -31,15 +32,26 @@ function draw_order_table($rows) {
     foreach($rows[0] as $key => $item) {
       echo "<th>$key</th>";
     }
-  
+    $tracking;
     foreach($rows as $row) {
       echo "<tr>";
       foreach($row as $item) {
         echo "<td>$item</td>";
       }
-      echo "<td><button id=''>Fulfill Order</button></td>";
+      $tracking = $row['TRACKING_NUM'];
+      
+      echo "<td><form action='fulfill_order.php' method='post'>";
+      echo "<button name='".$tracking."'>Fulfill Order</button>";
+      echo "</form></td>";
+
+      #echo "<td><form action='order_details_page' method='post'>";
+      #echo "<button name='".$tracking."'>Order Details</button>";
+      #echo "</form></td>";
+
       echo "</tr>";
     }
+
+    echo key($_POST[$tracking]);
 }
 
 function draw_table($rows) {
