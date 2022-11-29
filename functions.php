@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
