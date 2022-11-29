@@ -10,13 +10,12 @@ function draw_product_table($rows) {
     echo "<th>$key</th>";
   }
 
-  $qty;
   foreach($rows as $row) {
     echo "<tr>";
     foreach($row as $item) {
       echo "<td>$item</td>";
-      $qty = array($item)[3];
     }
+    $qty = array($row)['ITEM_QTY'];
 
     echo "<td><button>Select This Item</button></td>";
     echo "<td>Qty: ".$qty."<input type='number' min='1' value='1'></td>";
