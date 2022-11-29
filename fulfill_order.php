@@ -8,7 +8,8 @@ $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
 $fulfill = $pdo->prepare("SELECT * FROM Orders WHERE TRACKING_NUM = ?;");
-$fulfill->execute($tracking);
+$success = $fulfill->execute(array($tracking));
+echo $success;
 
 $rs = $pdo->query("SELECT * FROM Orders;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
