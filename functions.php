@@ -15,8 +15,10 @@ function draw_product_table($rows) {
     foreach($row as $item) {
       echo "<td>$item</td>";
     }
+    $qty = $item['ITEM_QTY'];
+
     echo "<td><button>Select This Item</button></td>";
-    echo "<td>Qty: <input type='number' min='1'></td>";
+    echo "<td>Qty: ".$qty."<input type='number' min='1' value='1'></td>";
     echo "<td><button>Add To Cart</button></td>";
     echo "</tr>";
   }
@@ -35,12 +37,13 @@ function draw_order_table($rows) {
       foreach($row as $item) {
         echo "<td>$item</td>";
       }
-      echo "<td><button>Fulfill Order</button></td>";
+      echo "<td><button id=''>Fulfill Order</button></td>";
       echo "</tr>";
     }
-  }
+}
 
-function draw_table($rows) {
+
+  function draw_table($rows) {
     echo "<table border=1 cellspacing=1>";
     echo "<tr>";
   
