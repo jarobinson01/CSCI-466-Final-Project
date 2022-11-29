@@ -42,7 +42,7 @@ function draw_order_table($rows) {
       }
       $tracking = $row['TRACKING_NUM'];
       
-      echo "<td><form action='fulfill_order' method='post'>";
+      echo "<td><form method='post'>";
       echo "<input type='submit' name='".$tracking."' value='Fulfill Order'>";
       echo "</form></td>";
 
