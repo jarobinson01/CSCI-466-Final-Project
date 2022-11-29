@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
@@ -40,17 +42,15 @@ function draw_order_table($rows) {
       }
       $tracking = $row['TRACKING_NUM'];
       
-      echo "<td><form method='post'>";
-      echo "<button name='".$tracking."'>Fulfill Order</button>";
+      echo "<td><form action='fulfill_order' method='post'>";
+      echo "<input type='submit' name='".$tracking."' value='Fulfill Order'>";
       echo "</form></td>";
 
       #echo "<td><form action='order_details_page' method='post'>";
       #echo "<button name='".$tracking."'>Order Details</button>";
       #echo "</form></td>";
-
-      echo "</tr>";
-
       echo $_POST[$tracking];
+      echo "</tr>";
     }
 
     
