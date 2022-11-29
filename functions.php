@@ -49,9 +49,11 @@ function draw_order_table($rows) {
       #echo "</form></td>";
 
       echo "</tr>";
+
+      echo $_POST[$tracking];
     }
 
-    echo key($_POST[$tracking]);
+    
 }
 
 function draw_table($rows) {
