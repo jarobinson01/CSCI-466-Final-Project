@@ -32,7 +32,7 @@ function draw_order_table($rows) {
     foreach($rows[0] as $key => $item) {
       echo "<th>$key</th>";
     }
-    $tracking;
+
     foreach($rows as $row) {
       echo "<tr>";
       foreach($row as $item) {
@@ -40,7 +40,7 @@ function draw_order_table($rows) {
       }
       $tracking = $row['TRACKING_NUM'];
       
-      echo "<td><form action='fulfill_order.php' method='post'>";
+      echo "<td><form method='post'>";
       echo "<button name='".$tracking."'>Fulfill Order</button>";
       echo "</form></td>";
 
