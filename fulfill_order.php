@@ -7,7 +7,7 @@ include("functions.php");
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
-$fulfill = $pdo->prepare("ALTER Orders SET ORDER_STATUS = 'FULFILLED' WHERE TRACKING_NUM = ?");
+$fulfill = $pdo->prepare("ALTER Orders SET ORDER_STATUS = 'FULFILLED' WHERE TRACKING_NUM = ?;");
 $fulfill->execute(array($tracking));
 
 $rs = $pdo->query("SELECT * FROM Orders;");
