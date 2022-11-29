@@ -46,7 +46,7 @@ function draw_order_table($rows) {
       echo "<input type='submit' name='".$tracking."' value='Fulfill Order'>";
       echo "</form></td>";
 
-      echo "<td><form action='order_details_page.php' method='post'>";
+      echo "<td><form action='order_details.php' method='post'>";
       echo "<button name='".$tracking."'>Order Details</button>";
       echo "</form></td>";
       
