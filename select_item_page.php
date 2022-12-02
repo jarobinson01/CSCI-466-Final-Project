@@ -12,7 +12,7 @@ $item = $pdo->prepare("SELECT * FROM Inventory WHERE ITEM_ID = ?;");
 $item->execute(array($id));
 
 $rows = $item->fetchAll(PDO::FETCH_ASSOC);
-draw_table($rows);
+draw_item($rows);
 
 echo "<form action='main_page.php'>";
 echo "<input type='submit' value='Home'/>";

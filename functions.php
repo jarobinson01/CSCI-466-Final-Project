@@ -17,16 +17,11 @@ function draw_product_table($rows) {
     }
     $id = $row['ITEM_ID'];
     $qty = $row['ITEM_QTY'];
-
-    //echo "<form action='select_item_page.php'>";
-    //echo "<td><button>Select This Item</button></td>";
-    //echo "</form>";
       
     echo "<td><form action='select_item_page.php' method='post'>";
     echo "<input type='submit' name='".$id."' value='Select This Item'>";
     echo "</form></td>";
   
-    //
     echo "<td>Qty: <input type='number' min='1' max='".$qty."'value='1'></td>";
     echo "<td><button id='".$id."'>Add To Cart</button></td>";
     echo "</tr>";
@@ -91,6 +86,11 @@ function draw_item($rows) {
       foreach($row as $item) {
         echo "<td>$item</td>";
       }
+      $id = $row['ITEM_ID'];
+      $qty = $row['ITEM_QTY'];
+    
+      echo "<td>Qty: <input type='number' min='1' max='".$qty."'value='1'></td>";
+      echo "<td><button id='".$id."'>Add To Cart</button></td>";
       echo "</tr>";
     }
 }
