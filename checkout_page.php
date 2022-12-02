@@ -11,11 +11,12 @@ echo "<h2>Checkout</h2><br>";
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
-$rs = $pdo->query("SELECT *, SUM(ITEM_COST) FROM Cart;");
+$rs = $pdo->query("SELECT * FROM Cart;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
 
-$order_total = $pdo->query("SELECT SUM(ITEM_COST) FROM Cart;");
+$rs = $pdo->query("SELECT SUM(ITEM_COST) FROM Cart;");
+$order_total = $rs->fetchAll(PDO::FETCH_ASSOC);
 echo $order_total;
 
 echo "<form action='order_confirmation' method='post'>";
