@@ -22,19 +22,17 @@ $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($rows as $row) {
     $total += $row['ITEM_COST'] * $row['ITEM_QTY'];
-    /*foreach($row as $item) {
-        echo "<b>Order Total: <b>";
-        echo $item;
-        echo "<br>";
-    }*/
 }
+
 echo "<b>Order Total: $<b>";
 echo $total;
 echo "<br>";
 
-echo "<form action='order_confirmation' method='post'>";
+//Submit information form
+echo "<form action='order_confirmation.php' method='post'>";
 echo "First Name: <input type='text' name='f_name' required><br>";
 echo "Last Name: <input type='text' name='l_name' required><br>";
+echo "Email: <input type='text' name='email' required><br>";
 echo "Card Number: <input type='text' name='card_num' required><br>";
 echo "<input type='submit' name='Checkout'>";
 echo "</form>";

@@ -1,11 +1,9 @@
 CREATE TABLE Customers(
     CUST_ID int not null AUTO_INCREMENT,
-    ORDER_NUM int not null,
     CUST_FNAME char(50) not null,
     CUST_LNAME char(50) not null,
     CUST_EMAIL char(100) not null,
-    primary key(ORDER_NUM),
-    foreign key(ORDER_NUM) references Orders(TRACKING_NUM)
+    primary key(ORDER_NUM)
 );
 
 INSERT INTO Customers VALUES
