@@ -19,7 +19,7 @@ function draw_product_table($rows) {
     $qty = $row['ITEM_QTY'];
 
     echo "<form action='select_item_page.php'>";
-    echo "<td><button>Select This Item</button></td>";
+    echo "<input type='submit' value='Select This Item'/>";
     echo "</form>";
   
     //
