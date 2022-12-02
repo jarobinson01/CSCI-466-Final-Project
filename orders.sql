@@ -8,7 +8,7 @@ CREATE TABLE Orders(
 );
 
 INSERT INTO Orders VALUES
-    (1, 149.99, "PROCESSING"),
-    (2, 19.99, "PROCESSING"),
-    (3, 199.99, "FULFILLED"),
-    (4, 119.99, "PROCESSING");
+    (1, 1, 149.99, "PROCESSING"),
+    (2, 1, 19.99, "PROCESSING"),
+    (3, 2, 199.99, "FULFILLED"),
+    (4, 3, 119.99, "PROCESSING");
