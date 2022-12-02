@@ -33,15 +33,6 @@ foreach($rows as $row) {
     $total += $row['ITEM_COST'] * $row['ITEM_QTY'];
 }
 
-$find_customer = $pdo->prepare("SELECT * FROM Customers WHERE CUST_EMAIL = ?;");
-$find_customer->execute(array($email));
-$rows = $find_customer->fetchAll(PDO::FETCH_ASSOC);
-
-foreach($rows as $row) {
-    $cust_id += $row['CUST_ID'];
-    echo "Cust id:".$cust_id;
-}
-
-$add_order = $pdo->prepare("INSERT INTO Orders(CUST_ID, ORDER_COST, ORDER_STATUS) VALUES('?', '?', 'PROCESSING');");
-$add_customer->execute(array($cust_id, $total));
+$add_order = $pdo->prepare("INSERT INTO Orders(CUST_EMAIL, ORDER_COST, ORDER_STATUS) VALUES('?', '?', 'PROCESSING');");
+$add_customer->execute(array($email, $total));
 ?>

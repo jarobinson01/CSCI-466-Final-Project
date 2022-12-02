@@ -22,7 +22,7 @@ INSERT INTO Inventory VALUES
 
 INSERT INTO Customers VALUES
     (1, "Jane", "Doe", "email@gmail.com"),
-    (2, "Jane", "Doe", "email@gmail.com"),
+    (2, "Jack", "Black", "jack@gmail.com"),
     (3, "John", "Smith", "jsmith@gmail.com"),
     (4, "Adam", "Parker", "ap1234@gmail.com"),
     (5, "Peter", "Lee", "lee1980@gmail.com");
@@ -32,9 +32,9 @@ INSERT INTO Cart VALUES
     (2, "Jeans", 19.99, 2);
 
 INSERT INTO Orders VALUES
-    (1, 1, 149.99, "PROCESSING"),
-    (2, 1, 19.99, "PROCESSING"),
-    (3, 2, 199.99, "FULFILLED"),
-    (4, 3, 119.99, "PROCESSING");
-    (5, 4, 249.99, "PROCESSING");
-    (6, 5, 79.99, "FULFILLED");
+    (1, "email@gmail.com", 149.99, "PROCESSING"),
+    (2, "email@gmail.com", 19.99, "PROCESSING"),
+    (3, "jack@gmail.com", 199.99, "FULFILLED"),
+    (4, "jsmith@gmail.com", 119.99, "PROCESSING");
+    (5, "ap1234@gmail.com", 249.99, "PROCESSING");
+    (6, "lee1980@gmail.com", 79.99, "FULFILLED");

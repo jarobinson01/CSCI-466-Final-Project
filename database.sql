@@ -12,6 +12,7 @@ CREATE TABLE Customers(
     CUST_FNAME char(50) not null,
     CUST_LNAME char(50) not null,
     CUST_EMAIL char(100) not null,
+    key(CUST_EMAIL),
     primary key(CUST_ID)
 );
 
@@ -26,9 +27,9 @@ CREATE TABLE Cart(
 
 CREATE TABLE Orders(
     TRACKING_NUM int not null AUTO_INCREMENT,
-    CUST_ID int not null,
+    CUST_EMAIL char(100) not null,
     ORDER_COST decimal(6, 2) not null,
     ORDER_STATUS char(10) not null,
     primary key(TRACKING_NUM),
-    foreign key(CUST_ID) references Customers(CUST_ID)
+    foreign key(CUST_EMAIL) references Customers(CUST_EMAIL)
 );
