@@ -41,6 +41,6 @@ foreach($rows as $row) {
     $cust_id += $row['CUST_ID'];
 }
 
-$add_order = $pdo->prepare("INSERT IGNORE INTO Orders(CUST_ID, ORDER_COST) VALUES('?', '?', 'PROCESSING');");
+$add_order = $pdo->prepare("INSERT IGNORE INTO Orders(CUST_ID, ORDER_COST, ORDER_STATUS) VALUES('?', '?', 'PROCESSING');");
 $add_customer->execute(array($cust_id, $total));
 ?>
