@@ -7,6 +7,7 @@ include("functions.php");
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
+// display orders
 $fulfill = $pdo->prepare("SELECT * FROM Orders WHERE TRACKING_NUM = ?;");
 $fulfill->execute(array($tracking));
 

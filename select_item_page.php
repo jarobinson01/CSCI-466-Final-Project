@@ -7,6 +7,7 @@ include("functions.php");
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
+// display specified item from inventory
 $item = $pdo->prepare("SELECT * FROM Inventory WHERE ITEM_ID = ?;");
 $item->execute(array($id));
 

@@ -2,6 +2,7 @@
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
+// display products in inventory
 function draw_product_table($rows) {
   echo "<table border=1 cellspacing=1>";
   echo "<tr>";
@@ -28,6 +29,7 @@ function draw_product_table($rows) {
   }
 }
 
+// display orders
 function draw_order_table($rows) {
     echo "<table border=1 cellspacing=1>";
     echo "<tr>";
@@ -57,6 +59,7 @@ function draw_order_table($rows) {
     
 }
 
+// generic table display
 function draw_table($rows) {
     echo "<table border=1 cellspacing=1>";
     echo "<tr>";
@@ -73,6 +76,7 @@ function draw_table($rows) {
     }
 }
 
+// display item from inventory
 function draw_item($rows) {
     echo "<table border=1 cellspacing=1>";
     echo "<tr>";
@@ -94,5 +98,4 @@ function draw_item($rows) {
       echo "</tr>";
     }
 }
-
 ?>

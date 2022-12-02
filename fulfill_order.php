@@ -7,6 +7,7 @@ include("functions.php");
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
+// set order status to fulfilled
 $fulfill = $pdo->prepare("UPDATE Orders SET ORDER_STATUS = 'FULFILLED' WHERE TRACKING_NUM = ?;");
 $fulfill->execute(array($tracking));
 
