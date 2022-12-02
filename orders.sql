@@ -4,7 +4,7 @@ CREATE TABLE Orders(
     ORDER_COST decimal(6, 2) not null,
     ORDER_STATUS char(10) not null,
     primary key(TRACKING_NUM),
-    foreign key(CUST_ID) references Customers(CUST_ID);
+    foreign key(CUST_ID) references Customers(CUST_ID)
 );
 
 INSERT INTO Orders VALUES
