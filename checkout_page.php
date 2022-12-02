@@ -20,7 +20,9 @@ $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($rows as $row) {
     foreach($row as $item) {
-      echo $item;
+        echo "<b>Order Total: <b>";
+        echo $item;
+        echo "<br>";
     }
 }
 
