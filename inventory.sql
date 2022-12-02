@@ -3,6 +3,7 @@ CREATE TABLE Inventory(
     ITEM_NAME char(50) not null,
     ITEM_COST decimal(4, 2) not null,
     ITEM_QTY int,
+    key(ITEM_ID, ITEM_NAME, ITEM_COST),
     primary key(ITEM_ID)
 );
 
