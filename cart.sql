@@ -4,8 +4,7 @@ CREATE TABLE Cart(
     ITEM_COST decimal(4, 2) not null,
     ITEM_QTY int not null,
     primary key(ITEM_ID),
-    constraint fk_cart foreign key(ITEM_ID, ITEM_NAME, ITEM_COST) 
-    references Inventory(ITEM_COST)
+    foreign key(ITEM_NAME) references Inventory(ITEM_NAME)
 );
 
 INSERT INTO Cart VALUES
