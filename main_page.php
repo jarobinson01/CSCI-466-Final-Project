@@ -11,7 +11,10 @@ $rs = $pdo->query("SELECT * FROM Inventory;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_product_table($rows);
 
-echo "<button>Track My Orders</button>";
+echo "<form action='track_orders_page.php'>";
+echo "<input type='submit' value='Track My Orders'/>";
+echo "</form>";
+
 echo "<form action='order_info_page.php'>";
 echo "<input type='submit' value='Outstanding Orders'/>";
 echo "</form>";

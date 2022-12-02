@@ -73,44 +73,4 @@ function draw_table($rows) {
         }
     }
 }
-
-function draw_item($rows) {
-    echo "<table border=1 cellspacing=1>";
-    echo "<tr>";
-  
-    foreach($rows[0] as $key => $item) {
-      echo "<th>$key</th>";
-    }
-
-    foreach($rows as $row) {
-      echo "<tr>";
-      foreach($row as $item) {
-        echo "<td>$item</td>";
-      }
-      echo "</tr>";
-    }
-}
-
-
-function draw_selected_item($rows) {
-    echo "<table border=1 cellspacing=1>";
-    echo "<tr>";
-  
-   // foreach($rows[0] as $key => $item) {
-     // echo "<th>$key</th>";
-  //  }
-
-    foreach($rows as $row) {
-      echo "<tr>";
-      foreach($row as $item) {
-        echo "<td>$item</td>";
-      }
-      $tracking = $row['TRACKING_NUM'];
-      
-      echo "<td><form action='select_item_page.php' method='post'>";
-      echo "<input type='submit' name='".$tracking."' value='Select Item'>";
-      echo "</form></td>";
-
-    }
-} 
 ?>

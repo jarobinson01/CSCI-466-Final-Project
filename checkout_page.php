@@ -11,7 +11,7 @@ echo "<h2>Checkout</h2><br>";
 $dsn = "mysql:host=courses;dbname=z1934222";
 $pdo = new PDO($dsn, $username, $password);
 
-$rs = $pdo->query("SELECT * FROM Cart;");
+$rs = $pdo->query("SELECT *, SUM(ITEM_COST) FROM Cart;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
 

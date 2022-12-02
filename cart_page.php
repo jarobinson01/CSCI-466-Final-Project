@@ -8,6 +8,10 @@ echo "<form action='main_page.php'>";
 echo "<input type='submit' value='Home'/>";
 echo "</form><br>";
 
+echo "<form action='checkout_page.php'>";
+echo "<input type='submit' value='Checkout'/>";
+echo "</form>";
+
 echo "<h1>Cart</h1><br>";
 
 $dsn = "mysql:host=courses;dbname=z1934222";
