@@ -33,9 +33,9 @@ echo $total;
 echo "<br>";
 
 echo "<form action='order_confirmation' method='post'>";
-echo "First Name: <input type='text' name='f_name'><br>";
-echo "Last Name: <input type='text' name='l_name'><br>";
-echo "Card Number: <input type='text' name='card_num'><br>";
+echo "First Name: <input type='text' name='f_name' required><br>";
+echo "Last Name: <input type='text' name='l_name' required><br>";
+echo "Card Number: <input type='text' name='card_num' required><br>";
 echo "<input type='submit' name='Checkout'>";
 echo "</form>";
 ?>
