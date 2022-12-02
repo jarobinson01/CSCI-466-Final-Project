@@ -1,5 +1,5 @@
 CREATE TABLE Customers(
-    CUST_ID int not null AUTO_INCREMENT default 1,
+    CUST_ID int default 1 not null AUTO_INCREMENT,
     CUST_FNAME char(50) not null,
     CUST_LNAME char(50) not null,
     CUST_EMAIL char(100) not null,
