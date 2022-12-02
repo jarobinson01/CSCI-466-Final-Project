@@ -3,7 +3,7 @@ CREATE TABLE Customers(
     CUST_FNAME char(50) not null,
     CUST_LNAME char(50) not null,
     CUST_EMAIL char(100) not null,
-    primary key(ORDER_NUM)
+    primary key(CUST_ID)
 );
 
 INSERT INTO Customers VALUES
