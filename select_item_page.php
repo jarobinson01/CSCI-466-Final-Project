@@ -1,5 +1,4 @@
 <?php
-
 $id = key($_POST);
 
 include("passwords.php");
@@ -17,13 +16,4 @@ draw_item($rows);
 echo "<form action='main_page.php'>";
 echo "<input type='submit' value='Home'/>";
 echo "</form>";
-
-echo "<h1>Item Selected</h1><br>";
-
-
-
-
-
-
-
 ?>

@@ -15,6 +15,9 @@ $rs = $pdo->query("SELECT *, SUM(ITEM_COST) FROM Cart;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 draw_table($rows);
 
+$order_total = $pdo->query("SELECT SUM(ITEM_COST) FROM Cart;");
+echo $order_total;
+
 echo "<form action='order_confirmation' method='post'>";
 echo "First Name: <input type='text' name='f_name'><br>";
 echo "Last Name: <input type='text' name='l_name'><br>";
