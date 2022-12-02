@@ -8,6 +8,6 @@ CREATE TABLE Customers(
 
 INSERT INTO Customers VALUES
     (1, "Jane", "Doe", "email@gmail.com"),
-    (1, "Jane", "Doe", "email@gmail.com"),
+    (2, "Jane", "Doe", "email@gmail.com"),
     (3, "John", "Smith", "jsmith@gmail.com"),
     (4, "Peter", "Lee", "lee1980@gmail.com");
