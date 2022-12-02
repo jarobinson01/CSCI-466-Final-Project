@@ -7,7 +7,7 @@ CREATE TABLE Orders(
     foreign key(CUST_ID) references Customers(CUST_ID)
 );
 
-INSERT INTO Orders(TRACKING_NUM, ORDER_COST, ORDER_STATUS) VALUES
+INSERT INTO Orders VALUES
     (1, 149.99, "PROCESSING"),
     (2, 19.99, "PROCESSING"),
     (3, 199.99, "FULFILLED"),
