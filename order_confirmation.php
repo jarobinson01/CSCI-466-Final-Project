@@ -36,6 +36,7 @@ foreach($rows as $row) {
 $find_customer = $pdo->prepare("SELECT * FROM Customers WHERE EMAIL = '?';");
 $find_customer->execute(array($email));
 $rows = $find_customer->fetchAll(PDO::FETCH_ASSOC);
+draw_table($rows);
 
 foreach($rows as $row) {
     $cust_id += $row['CUST_ID'];
