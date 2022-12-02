@@ -35,6 +35,6 @@ INSERT INTO Orders VALUES
     (1, "email@gmail.com", 149.99, "PROCESSING"),
     (2, "email@gmail.com", 19.99, "PROCESSING"),
     (3, "jack@gmail.com", 199.99, "FULFILLED"),
-    (4, "jsmith@gmail.com", 119.99, "PROCESSING");
-    (5, "ap1234@gmail.com", 249.99, "PROCESSING");
+    (4, "jsmith@gmail.com", 119.99, "PROCESSING"),
+    (5, "ap1234@gmail.com", 249.99, "PROCESSING"),
     (6, "lee1980@gmail.com", 79.99, "FULFILLED");
