@@ -21,7 +21,8 @@ $rs = $pdo->query("SELECT ITEM_COST, ITEM_QTY FROM Cart;");
 $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($rows as $row) {
-    $total += $row[0] * $row[1];
+    echo $row;
+    //$total += $row[0] * $row[1];
     /*foreach($row as $item) {
         echo "<b>Order Total: <b>";
         echo $item;
@@ -30,7 +31,7 @@ foreach($rows as $row) {
 }
 
 //Print order total
-echo "<b>Order Total: <b>";
+echo "<b>Order Total: $<b>";
 echo $total;
 echo "<br>";
 /*$rs = $pdo->query("SELECT SUM(ITEM_COST) FROM Cart;");
