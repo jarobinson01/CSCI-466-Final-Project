@@ -1,12 +1,3 @@
-CREATE TABLE Inventory(
-    ITEM_ID int not null,
-    ITEM_NAME char(50) not null,
-    ITEM_COST decimal(4, 2) not null,
-    ITEM_QTY int,
-    key(ITEM_ID, ITEM_NAME, ITEM_COST),
-    primary key(ITEM_ID)
-);
-
 INSERT INTO Inventory VALUES
     (1, "Shirt", 9.99, 50),
     (2, "Jeans", 19.99, 50),
@@ -28,3 +19,22 @@ INSERT INTO Inventory VALUES
     (18, "Shorts", 49.99, 50),
     (19, "Headband", 9.99, 50),
     (20, "Backpack", 59.99, 50);
+
+INSERT INTO Customers VALUES
+    (1, "Jane", "Doe", "email@gmail.com"),
+    (2, "Jane", "Doe", "email@gmail.com"),
+    (3, "John", "Smith", "jsmith@gmail.com"),
+    (4, "Adam", "Parker", "ap1234@gmail.com"),
+    (5, "Peter", "Lee", "lee1980@gmail.com");
+
+INSERT INTO Cart VALUES
+    (1, "Shirt", 9.99, 1),
+    (2, "Jeans", 19.99, 2);
+
+INSERT INTO Orders VALUES
+    (1, 1, 149.99, "PROCESSING"),
+    (2, 1, 19.99, "PROCESSING"),
+    (3, 2, 199.99, "FULFILLED"),
+    (4, 3, 119.99, "PROCESSING");
+    (5, 4, 249.99, "PROCESSING");
+    (6, 5, 79.99, "FULFILLED");
